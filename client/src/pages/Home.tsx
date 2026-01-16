@@ -31,8 +31,8 @@ export default function Home() {
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-secondary text-white">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="Digital Agency Office" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/40" />
+          <img src={heroBg} alt="Digital Agency Office" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         <div className="container relative z-10 px-4 py-20 mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -41,18 +41,18 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight text-white">
               Grow Your Business with <span className="text-primary">Smart Digital Solutions</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-medium">
               We help ambitious businesses scale through innovative web development, strategic marketing, and data-driven SEO.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "text-base px-8 py-6 font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow")}>
-                  Get Free Consultation
+              <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "text-base px-8 py-6 font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:scale-105 transition-all duration-300")}>
+                Get Free Consultation
               </Link>
-              <Link href="/services" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "text-base px-8 py-6 bg-transparent text-white border-white/20 hover:bg-white/10 hover:text-white")}>
-                  Explore Services
+              <Link href="/services" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "text-base px-8 py-6 bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-black font-semibold transition-all duration-300")}>
+                Explore Services
               </Link>
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Link href="/services" className={cn(buttonVariants({ variant: "ghost" }), "text-primary hover:text-primary/80 gap-2 font-medium")}>
-                View All Services <ArrowRight className="w-4 h-4" />
+              View All Services <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function Home() {
             Let's discuss how we can help you achieve your business goals. Book a free consultation today.
           </p>
           <Link href="/contact" className={cn(buttonVariants({ variant: "secondary", size: "lg" }), "font-bold text-primary")}>
-              Contact Us Now
+            Contact Us Now
           </Link>
         </div>
       </section>
